@@ -1,0 +1,254 @@
+
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .top{
+            display: flex;
+            
+        }
+        .top div{
+            margin: 10px;
+            position: fixed;
+            background-color: white;
+        }
+        .container{
+            height: 100vh;
+            position: relative;
+        }
+        .text{
+            text-align: center;
+            padding: 50px 0px;
+        }
+        .text h1{
+            font-size: 70px;
+            margin-top: 7%;
+            margin-bottom: 10px;
+            text-shadow: 
+            0 0 7px #1d0f0f;
+        }
+        .text p{
+            font-size: 22px;
+        }
+        .container::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: url("https://www.mvgrce.com/sites/default/files/2019-05/New_Library1.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 0.2;
+        }
+        .buttons{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .buttons button{
+            margin: 10px;
+            /* width: 75px;
+            padding: 5px; */
+        }
+        button{
+            width: 9em;
+            height: 3em;
+            border-radius: 30em;
+            font-size: 15px;
+            font-family: inherit;
+            border: none;
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            z-index: 1;
+            box-shadow: 6px 6px 12px #c5c5c5;
+            /* -6px -6px -12px #ffffff; */
+        }
+        button::before{
+            content: "";
+            width: 0;
+            height: 3em;
+            border-radius: 30em;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: linear-gradient(to 
+            right,#16221a 0%,#d8d7c2 100%);
+            transition: .5s ease;
+            display: block;
+            z-index: -1;
+        }
+        button:hover::before{
+            width: 9em; 
+        }
+        .navbar{
+            position: absolute;
+            float: right;
+            right: 2px;
+        }
+        .navbar ul{
+            display: flex;
+            flex-direction: row;
+            margin: 10px;
+        }
+        .navbar ul li{
+            list-style: none;
+            margin: 15px;
+
+        }
+        .navbar ul a{
+            color: #051409;
+            font-weight: bold;
+            /* border: solid; */
+            padding: 9px;
+            box-shadow: 6px 6px 12px #1e0b0b;
+            border-radius: 5px;
+            transition: all 0.2s;
+            width: 15px;
+            text-decoration: none;
+        }
+        .navbar ul a:hover{
+            background-color:  #201c25;
+            color: white;
+            /* border: solid; */
+            padding: 15px;
+            cursor: pointer;
+        }
+        .facilities {
+            margin-top: 230px;
+            /* background: rgb(153, 146, 146); */
+            padding: 10px;
+            background: #050306;
+
+           
+        }
+        .room_allocation{
+            margin-top: 50px;
+            /* background: rgb(240, 234, 115); */
+            background: #050306;
+        }
+        .food_menu{
+            margin-top: 50px;
+            /* background: rgb(31, 97, 211); */
+            background: #050306;
+
+
+        }
+        .complaint_box{
+            margin-top: 50px;
+            background: rgb(207, 16, 191);
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .complaint_box input,select,textarea{
+                     width: 500px;
+                     height: 50px;
+        }
+
+         .sub{
+            margin-top: 10px;
+            display: flex;
+            /* width: 500px; */
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .sub img{
+            width: 350px;
+            height: 250px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 17px  #111;
+            
+        }
+        .sub p{
+            width: 350px;
+            background: linear-gradient(#8600FF,#DF00FF);
+            color: white;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 5px;
+        }
+        .sub label{
+            color: rgb(244, 244, 244);
+        }
+        h2{
+            font-size: 50px;
+            text-shadow:0 0 7px #f4efef;
+            margin-bottom: 20px;
+        }
+        .sub div{
+            text-align: center;
+        }
+        label{
+            font-size: 20px;
+            font-weight: bold;
+        }
+        div .beds{
+            display: flex;
+            flex-direction: column;
+        }
+        .side{
+            font-size: 40px;
+            /* border: solid; */
+            border-radius: 10px;
+            padding: 10px;
+            background-image: linear-gradient(to 
+            right,#16221a 0%,#d8d7c2 100%);
+        }
+
+        .contact_us{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            background: black;
+            color: white;
+            padding: 10px;
+
+        }
+        .contact_us div{
+            margin-right: 70px;
+        }
+        .contact_us div ul li{
+            list-style: none;
+            margin: 10px;
+        }
+
+        .copy{
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        .submit{
+            border: solid;
+            padding: 10px;
+            text-align: center;
+            
+        }
+        .complaint_sub{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        input[type="text"]{
+            width: 500px;
+            border: none;
+            border-radius: 10px;
+        }
+        .complaint_sub input{
+            margin: 5px;
+            box-shadow: 0 0 17px #111;
+        }
+        .complaint_sub input[type="submit"]{
+            width: 150px;
+            border-radius:10px ;
+        }
