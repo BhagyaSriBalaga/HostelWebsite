@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration_Page</title>
+    <link rel="stylesheet" href="Registration_Page.css">
+</head>
+<body>
+<div style="width: 100%; height: 100%; overflow: scroll;">
+    <h3>Registration_Page</h3>
+    <center>
+<div class="details">
+    <form name="regform" onsubmit="return formvalidate()" class="tab" target="regsucces.html">
+        <table>
+        <tr><td>First Name</td>
+            <td><input type="text" name="firstName" ></td></tr>
+            <tr><td>Last Name</td></tr>
+            <tr><td><input type="text" name="lastName" onblur="return formvalidate()";></td></tr>
+            <tr><td><span id="para"></span></td></tr>
+            <tr><td>Gender</td></tr>
+            <tr><td><input type="radio" name="gender" style="margin-right:0px ;">Male
+            <input type="radio" name="gender" style="margin-right:0px ;">Female</td></tr>
+           
+            <tr><td><span id="para"></span></td></tr>
+            <tr><td>Date Of Birth</td></tr>
+            <tr><td><input type="date"></td></tr>
+            <tr><td>Email</td></tr>
+            <tr><td><input type="email" ></td></tr>
+            <tr><td>New Password</td></tr> 
+            <tr><td><input type="password" name="pword" onblur="return formvalidate()"></td></tr>
+            <span id="p"></span>
+            <tr><td>Confirm Password</td></tr> 
+            <tr><td><input type="password" name="cpword"></td></tr>
+            <span id="p"></span>
+             <!-- <tr>Address</tr> -->
+             <tr><td>Contact No</td></tr>
+            <tr><td><input type="tel" name="cnum" onblur="return formvalidate()"></td></tr>
+            <tr><td><span id="para1"></span></td></tr>
+            <tr><td>Address</td></tr>
+            <tr><td><textarea name="address"></textarea></td></tr>
+             <!-- <tr><td>Submit</td></tr> -->
+            <tr><td><button>Submit</button></td>
+            <td><button>Reset</button></td></tr>
+        </table> 
+    </form>
+
+</div></center>
+</div>
+<script>
+      function formvalidate(){
+        let fname=document.regform.firstName.value;
+        let lname=document.regform.lastName.value;
+        let gen=document.regform.gender.value;
+        let wt=document.regform.weight.value;
+        let age=document.regform.cAge.value;
+        let cn=document.regform.cnum.value;
+        let pwd=document.regform.pword.value;
+        let cpwd=document.regform.cpword.value;
+        let len=pwd.length;
+        let add=document.regform.address.value;
+        let char="!@#$%^&*(){}:<>/[]"
+        if (fname=="null" || fname=="")
+        {
+            alert("please fill the First Name");
+            return false;
+        }
+        else if(lname=="null"||lname=="")
+        {
+            (document.getElementById("para").innerHTML="Please fill the Last Name");
+        }
+        else if(wt=="null"||wt==""||age==""|| age=="null"||add==""||add=="null")
+        {
+           alert(document.getElementById("para1").innerHTML="Details must be filled");
+        }
+        else if(len >6||len<16)
+        {
+            alert(document.getElementById("para1").innerHTML="password invalid");
+            return false;
+        }
+        else if(cn==""||cn=="null")
+        {
+            (document.getElementById("par").innerHTML="contact number must be filled");
+            return false;
+        }
+        else if (pwd!=cpwd || pwd.notmatched(char))
+        {
+            document.getElementById("p").innerHTML="passsssssssssssss";
+            return false;
+        }
+        return false;
+      }
+</script>
+    <style>
+        /* *{
+            padding: 0%;
+            margin: 0%;
+        } */
+        .buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    
+}
+button{
+    border: none;
+    background-color: rgb(226, 226, 233);
+    padding: 9px;
+    border-radius: 3px;
+}
+
+
+        input{
+            margin-right: auto;
+        }
+        h3{
+            text-align: center;
+            color: rgba(25, 255, 255, 1);
+            font-size: 35px;
+        }
+        table{
+            color: white;
+        }
+        .details {
+            border-radius: 55px;
+            width: 25%;
+            color: rgba(25, 255, 255, 1);
+            background-color: rgb(6, 90, 91);
+            padding: 10px;
+            font-size: 5opx;
+        }
+        td
+        {
+            color: black;
+            font-size: 15px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        form{
+            padding: 5px;
+            color: white;
+        }
+        body{
+            background-image:linear-gradient(rgba(24, 59, 89, 0.5),rgba(25, 255, 255, 1)), url(hostel_images/computer.jpg);
+            background-position:center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login_Page</title>
+    <link rel="Stylesheet" href="Login_Page.css">
+</head>
+<body>
+   <style>
+    .log{
+    border: solid;
+    padding: 0;
+    border-radius: 15px;
+    background-color:white;
+}
+.home{
+    text-align: center;
+    /* float: left; */
+    width: 100%;
+}
+
+.content
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    background-image:linear-gradient(rgba(0,0,400,0.05),blue), url(https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bG9naW4lMjBwYWdlJTIwZm9yJTIwaG9zcGl0YWx8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60);
+    background-position: center;
+    /* background-color: skyblue; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+#sub{
+    text-decoration: none;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    
+}
+button{
+    border: none;
+    background-color: rgb(138, 138, 198);
+    padding: 9px;
+    border-radius: 3px;
+}
+
+h1{
+    color: white;
+}
+   </style>
+    <div class="home" >
+        <h1>Login Page</h1>
+        <div class="content">
+            <form class="log" name="loginform" action="Sucess.html"  onsubmit="return formvalidate()">
+            <img src="hostel_images/avatar.png"><br>
+            Username
+            <input type="text" name="userName" id="userId"><br><br>
+            Password
+            <input type="password" name="password"><br><br>
+            <!-- <button style="margin-left:1px ; color: black;"><a href="Sucess.html" id="sub" style="color: black;">Submit</a></button> -->
+           <div class="buttons">
+            <button>Submit</button>
+            <button type="reset" name="Reset" style="margin-left: 25px;">Reset</button>
+           </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function formvalidate()
+        {
+            let uname=document.getElementById("userId").value;
+            let pword=document.loginform.password.value;
+        
+        if(uname == null || uname=="")
+        {
+            alert(document.getElementById("para1").innerHTML="user name must not be empty");
+            return false;
+        }
+        
+        if(pword == null || pword=="")
+        {
+            alert(document.getElementById("para1").innerHTML="password must not be empty");
+            return false;
+        }
+    }
+    </script>
+</body>
+</html>
