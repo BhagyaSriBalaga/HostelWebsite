@@ -244,6 +244,11 @@
             border: none;
             border-radius: 10px;
         }
+       .contact{
+            font-size: 50px;
+            text-shadow:0 0 7px #191111;
+            margin-bottom: 20px;
+        }
         .complaint_sub input{
             margin: 5px;
             box-shadow: 0 0 17px #111;
