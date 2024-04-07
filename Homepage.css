@@ -126,7 +126,7 @@
             cursor: pointer;
         }
         .facilities {
-            margin-top: 230px;
+            margin-top:0;
             /* background: rgb(153, 146, 146); */
             padding: 10px;
             background: #a42edf;
