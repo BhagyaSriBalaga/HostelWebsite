@@ -183,6 +183,7 @@
             /* width: 500px; */
             align-items: center;
             justify-content: center;
+                flex-wrap:wrap;
             
         }
         .sub img{
