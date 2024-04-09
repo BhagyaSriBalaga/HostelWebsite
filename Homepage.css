@@ -294,3 +294,22 @@
             border-radius:10px ;
             cursor: pointer;
         }
+
+       @media screen and (max-width:400px){
+            .sub img{
+                width: 250px;
+                height: 250px;
+                margin: 20px;
+                border-radius: 10px;
+                box-shadow: 0 0 17px  #e9e5e5;
+                
+            }
+            .sub p{
+                width: 250px;
+                background: linear-gradient(#ecdff7,#f5f1f6);
+                color: rgb(18, 11, 11);
+                border-radius: 10px;
+                margin: 10px;
+                padding: 5px;
+            }
+        }
